@@ -1,0 +1,120 @@
+/*Manrope Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;600;800&display=swap');
+:root{
+  /*colors*/
+  --col-light-cyan: hsl(193, 38%, 86%);
+  --col-neon-green: hsl(150, 100%, 66%);
+  --col-grayish-blue: hsl(217, 19%, 38%);
+  --col-dark-grayish-blue: hsl(217, 19%, 24%);
+  --col-dark-blue: hsl(218, 23%, 16%);
+  
+}
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+  font-family: 'Manrope', sans-serif;
+}
+body{
+  background-color: var(--col-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  padding: 2rem;
+}
+.container{
+  width: 620px;
+  background-color: var(--col-dark-grayish-blue);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2rem 0rem 2rem;
+  min-height:350px;
+  position: relative;
+}
+
+/*ADVICE NUMBER*/
+.advice-number{
+  color: var(--col-neon-green);
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/*ADVICE*/
+.advice-box{
+  text-align: center;
+  color: var(--col-light-cyan);
+  font-weight: 900;
+  font-size: 1.4rem;
+  margin: 0rem 0rem 3rem 0rem;
+}
+
+/*FOOTER*/
+.footer{
+  width: calc(100% - 8rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 93px;
+  position: absolute;
+  bottom: -13px;
+}
+.divider{
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.new-advice{
+  width: 65px;
+  height: 65px;
+  border: none;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 48px;
+  background-color: var(--col-neon-green);
+  -moz-transition: 0.7s linear;
+  -webkit-transition: 0.7s linear;
+  -o-transition: 0.7s linear;
+  transition: 0.7s linear;
+
+  -webkit-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;
+}
+.new-advice:hover{
+  cursor:pointer;
+  box-shadow: 0px 0px 35px var(--col-neon-green);
+}
+.new-advice:hover .new-advice img{
+  box-shadow: 0px 0px 35px var(--col-neon-green);
+}
+
+/*----------------------------
+------------MEDIA-------------
+-----------------------------*/
+@media screen and (max-width:600px) {
+  .container{
+    min-height: 500px;
+  }
+}
+@media screen and (max-width:480px) {
+  .container{
+    min-height: 550px;
+  }
+}
+@media screen and (max-width:385px) {
+  body{
+    padding: 1rem;
+  }
+  .advice{
+    font-size: 1.2rem;
+  }
+}
